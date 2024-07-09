@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hybkproject/forgot_password.dart';
+import 'package:hybkproject/update_username.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -84,33 +84,23 @@ class SignUp extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
               ),
             ),
-            SizedBox(height: 15),
-            Padding(
-              padding: EdgeInsets.only(left: 180),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ForgotPassword()));
-                },
-                child: Text(
-                  'forgot password?',
-                  style: TextStyle(color: Color(0xff7DF9FF)),
-                ),
-              ),
-            ),
             SizedBox(height: 50),
-            Container(
-              alignment: Alignment.center,
-              height: 45,
-              width: 300,
-              decoration: BoxDecoration(
-                  color: Color(0xff7DF9FF),
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Text(
-                'Continue',
-                style: TextStyle(fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UpdateUsername()));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 45,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Color(0xff7DF9FF),
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             SizedBox(height: 40),
