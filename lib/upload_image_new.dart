@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hybkproject/forgot_password.dart';
+import 'package:hybkproject/text_styles.dart';
 
 class UploadImageNew extends StatelessWidget {
   const UploadImageNew({super.key});
@@ -18,24 +20,19 @@ class UploadImageNew extends StatelessWidget {
                       image: AssetImage('assets/images/upload.png'))),
             ),
             SizedBox(height: 20),
-            const Text(
+            Text(
               textAlign: TextAlign.center,
               'Awesome! \nYour profile picture looks great.',
-              style: TextStyle(fontSize: 20),
+              style: AppTextStyle.body(size: 20),
             ),
             SizedBox(height: 100),
-            Container(
-              alignment: Alignment.center,
-              height: 45,
-              width: 300,
-              decoration: BoxDecoration(
-                  color: Color(0xff7DF9FF),
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Text(
-                'Upload Image',
-                style: TextStyle(fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: AppButton(
+                onTap: () {},
+                text: 'Upload Image',
               ),
-            ),
+            )
           ],
         ),
       ),
